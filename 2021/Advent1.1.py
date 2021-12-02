@@ -1,4 +1,4 @@
-with open('input1.1.txt') as f:
+with open('2021/input1.1.txt') as f:
     inputlist = f.readlines()
 inputlist = list(map(int,(map(lambda s: s.strip(), inputlist))))
 higherCounter = 0

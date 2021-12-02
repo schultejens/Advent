@@ -8,7 +8,7 @@ def sum_neighbors(list):
 
     return new_list
 
-with open('input1.2.txt') as f:
+with open('2021/input1.2.txt') as f:
     inputlist = f.readlines()
 inputlist = list(map(int,(map(lambda s: s.strip(), inputlist))))
 higherCounter = 0

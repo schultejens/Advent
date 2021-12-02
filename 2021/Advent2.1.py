@@ -1,4 +1,4 @@
-with open('input2.1.txt') as f:
+with open('2021/input2.1.txt') as f:
     inputlist = f.readlines()
 
 #Input konvertieren
@@ -8,15 +8,15 @@ amount = list(map(int,amount))
 
 horizontal = 0
 depth = 0
-aim = 0
 
 for i in range(0,len(inputlist)):
     if direction[i] == 'forward':
         horizontal += amount[i]
-        depth += (aim*amount[i])
     if direction[i] == 'up':
-        aim -= amount[i]
+        depth -= amount[i]
     if direction[i] == 'down':
-        aim += amount[i]
+        depth += amount[i]
 
+print(horizontal)
+print(depth)
 print(horizontal*depth)
