@@ -4,16 +4,13 @@ from own_tools import get_strings
 input = get_strings("input.txt")
 inputlist = input[0].split(',')
 
-
-
 def start_new_day(fishies):
         #"0" Sekunden entfernen, rest der Liste "rueckt" nach vorne
        buffer = fishies.popleft()
        #aktuelle 6 Sekunden Fische dann mit den "entfernten" addieren
        fishies[6] += buffer
        #die neu entstandenen 8 Sekunden Fische hinzufügen (vorher 0 Sek)
-       fishies.append(buffer)
-        
+       fishies.append(buffer) 
 
 def initialise_first_fishies(inputlist):
     fishies = []
