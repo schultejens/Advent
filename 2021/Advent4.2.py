@@ -34,16 +34,36 @@ def checkWin(board):
     if(checkColWin(board)):
         return board
     return None
-          
-def picking(boards,picks):
-    for pick in picks:
-        for board in boards:
-            checkPick(board, pick)
-            if(checkWin(board) is not None):
-                return board, pick
-                               
-boards = readBoard(get_strings("2021/i4alex_board.txt"))
-picks = list(map(int,get_strings("2021/i4alex.txt")[0].split(',')))
 
-winningboard = picking(boards, picks)
-print(np.sum(winningboard[0])*winningboard[1])    
+
+
+                      
+def picking(boards,picks):
+    winningBoard= []  
+    amountOfBoards=len(boards)
+    for pick in picks:
+        #print(pick)
+        tempBoard=[]
+        
+        for board in boards:
+            tempBoard.append(checkPick(board, pick))
+        
+        for i in reversed(range(len(tempBoard))):
+            thisBoard = tempBoard[i]        
+            if(checkWin(thisBoard) is not None):
+                print('1996')
+                winningBoard.append(thisBoard)
+                del thisBoard
+            if(len(winningBoard) == amountOfBoards):
+                return winningBoard.pop(),pick   
+        tempboard = []
+    print(winningBoard)    
+                
+                               
+boardRead = readBoard(get_strings("2021/input4_boards.txt"))
+pickRead = list(map(int,get_strings("2021/input4_picks.txt")[0].split(',')))
+
+winningBoard = picking(boardRead, pickRead)
+#print(winningBoard[0],'pick: ',winningBoard[1])
+print("npsum:",np.sum(winningBoard[0]),'result: ',np.sum(winningBoard[0])*winningBoard[1])    
+#2634
