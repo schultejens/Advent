@@ -1,3 +1,6 @@
+import time
+start_time = time.time()
+
 with open('2022/input3_1.txt') as f:
     inputlist = f.read().splitlines()
 sum=0   
@@ -20,3 +23,5 @@ for i in range(0,len(inputlist),3):
         sum+= (val-96)
         
 print(sum)
+
+print("-- %s seconds --" % (time.time() - start_time))

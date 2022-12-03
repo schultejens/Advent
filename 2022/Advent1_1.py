@@ -1,4 +1,6 @@
 import numpy as np
+import time
+start_time = time.time()
 calories = []
 caloriebuffer = 0
 
@@ -16,3 +18,4 @@ calories = np.array(calories)
 print(np.max(calories))
 calories2 = np.argsort(-calories,axis=0)[:3]
 print (calories[calories2[0]]+calories[calories2[1]]+calories[calories2[2]])
+print("-- %s seconds --" % (time.time() - start_time))

@@ -1,3 +1,6 @@
+import time
+start_time = time.time()
+
 with open('2022/input2_1.txt') as f:
     inputlist = f.read().splitlines()
 sump1=0
@@ -19,3 +22,4 @@ for i in range(0,len(inputlist)):
     sump2+=dict2.get(inputlist[i],dict.get(inputlist[i].split(' ')[1]))      
 print(sump1)
 print(sump2)
+print("-- %s seconds --" % (time.time() - start_time))
