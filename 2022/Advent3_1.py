@@ -25,3 +25,4 @@ for i in range(0,len(inputlist),3):
 print(sum)
 
 print("-- %s seconds --" % (time.time() - start_time))
+#-- 0.002000570297241211 seconds --

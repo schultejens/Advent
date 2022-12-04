@@ -23,3 +23,4 @@ for i in range(0,len(inputlist)):
 print(sump1)
 print(sump2)
 print("-- %s seconds --" % (time.time() - start_time))
+#-- 0.003000497817993164 seconds --

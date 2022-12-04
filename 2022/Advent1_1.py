@@ -19,3 +19,4 @@ print(np.max(calories))
 calories2 = np.argsort(-calories,axis=0)[:3]
 print (calories[calories2[0]]+calories[calories2[1]]+calories[calories2[2]])
 print("-- %s seconds --" % (time.time() - start_time))
+#-- 0.0020024776458740234 seconds --
