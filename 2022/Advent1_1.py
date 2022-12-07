@@ -1,5 +1,6 @@
 import numpy as np
 import time
+
 start_time = time.time()
 calories = []
 caloriebuffer = 0
